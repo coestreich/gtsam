@@ -187,6 +187,7 @@ endif()
 
 if (NOT MSVC)
   option(GTSAM_BUILD_WITH_MARCH_NATIVE  "Enable/Disable building with all instructions supported by native architecture (binary may not be portable!)" ON)
+  set(GTSAM_BUILD_WITH_MARCH_NATIVE OFF)
   if(GTSAM_BUILD_WITH_MARCH_NATIVE)
     # Add as public flag so all dependant projects also use it, as required
     # by Eigen to avid crashes due to SIMD vectorization:
